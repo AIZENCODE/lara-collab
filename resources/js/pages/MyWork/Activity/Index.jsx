@@ -64,17 +64,17 @@ const ActivityIndex = () => {
   return (
     <>
       <Breadcrumbs fz={14} mb={30}>
-        <div>My Work</div>
-        <div>Projects activity</div>
+        <div>Mi trabajo</div>
+        <div>Actividad de proyectos</div>
       </Breadcrumbs>
 
       <Title order={1} mb={20}>
-        Projects activity
+      Actividad de proyectos
       </Title>
 
       <Select
         size="md"
-        placeholder="Select project"
+        placeholder="Seleccionar proyecto"
         allowDeselect={false}
         value={selectedProject}
         onChange={(value) => setSelectedProject(value)}
@@ -130,7 +130,7 @@ const ActivityIndex = () => {
       ) : (
         <Center mih={300}>
           <EmptyWithIcon
-            title="No activities found"
+            title="No se encontraron actividades"
             subtitle="On projects you have access to"
             icon={IconActivity}
           />

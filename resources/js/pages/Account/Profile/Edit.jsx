@@ -56,15 +56,15 @@ const ProfileIndex = () => {
             </Grid.Col>
             <Grid.Col span="auto">
               <FileInput
-                label="Profile image"
-                placeholder="Choose image"
+                label="Imagen de perfil"
+                placeholder="Elige imagen"
                 accept="image/png,image/jpeg"
                 onChange={(image) => updateValue("avatar", image)}
                 clearable
                 error={form.errors.avatar}
               />
               <Text size="xs" c="dimmed" mt="sm">
-                If no image is uploaded we will try to fetch it via{" "}
+              Si no se carga ninguna imagen, intentaremos obtenerla a través de{" "}
                 <Anchor href="https://unavatar.io" target="_blank" opacity={0.6}>
                   unavatar.io
                 </Anchor>{" "}
@@ -74,8 +74,8 @@ const ProfileIndex = () => {
           </Grid>
 
           <TextInput
-            label="Name"
-            placeholder="User full name"
+            label="Nombre"
+            placeholder="Nombre completo del usuario"
             required
             mt="md"
             value={form.data.name}
@@ -84,7 +84,7 @@ const ProfileIndex = () => {
           />
 
           <TextInput
-            label="Job title"
+            label="Título profesional"
             placeholder="e.g. Frontend Developer"
             required
             mt="md"
@@ -94,8 +94,8 @@ const ProfileIndex = () => {
           />
 
           <TextInput
-            label="Phone"
-            placeholder="Users phone number"
+            label="Teléfono"
+            placeholder="Número de teléfono de las usuarias"
             mt="md"
             value={form.data.phone}
             onChange={(e) => updateValue("phone", e.target.value)}
@@ -106,7 +106,7 @@ const ProfileIndex = () => {
 
           <TextInput
             label="Email"
-            placeholder="User email"
+            placeholder="Correo electrónico del usuario"
             required
             value={form.data.email}
             onChange={(e) => updateValue("email", e.target.value)}
@@ -115,8 +115,8 @@ const ProfileIndex = () => {
           />
 
           <PasswordInput
-            label="Password"
-            placeholder="User password"
+            label="Contraseña"
+            placeholder="Contraseña de usuario"
             mt="md"
             value={form.data.password}
             onChange={(e) => updateValue("password", e.target.value)}
@@ -124,8 +124,8 @@ const ProfileIndex = () => {
           />
 
           <PasswordInput
-            label="Confirm password"
-            placeholder="Confirm password"
+            label="Confirmar Contraseña"
+            placeholder="Confirmar Contraseña"
             mt="md"
             value={form.data.password_confirmation}
             onChange={(e) => updateValue("password_confirmation", e.target.value)}

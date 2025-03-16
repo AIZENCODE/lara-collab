@@ -36,11 +36,11 @@ class UserCreatedNotification extends Notification implements ShouldQueue
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-            ->subject(config('app.name').' - Your account was created!')
-            ->greeting("{$notifiable->getFirstName()}, welcome aboard!")
-            ->line('An account has been set up for you by the administrator. You can click the button below to log in with the provided password. It might be a good idea to change the password when you login.')
-            ->line("Password: **{$this->password}**")
-            ->action('Login', route('auth.login.form', ['email' => $notifiable->email]))
+            ->subject(config('app.name').' - Tu cuenta fue creada!')
+            ->greeting("{$notifiable->getFirstName()}, bienvenido!")
+            ->line('El administrador ha creado una cuenta para usted. Puede hacer clic en el botón de abajo para iniciar sesión con la contraseña proporcionada. Le recomendamos cambiar la contraseña al iniciar sesión.')
+            ->line("Contraseña: **{$this->password}**")
+            ->action('Iniciar sesion', route('auth.login.form', ['email' => $notifiable->email]))
             ->salutation('See you soon!');
     }
 }

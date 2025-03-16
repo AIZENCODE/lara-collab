@@ -119,7 +119,7 @@ const InvoiceEdit = () => {
           onClick={() => redirectTo('invoices.index')}
           fz={14}
         >
-          Invoices
+          Facturas
         </Anchor>
         <div>Edit</div>
       </Breadcrumbs>
@@ -131,7 +131,7 @@ const InvoiceEdit = () => {
         mb='lg'
       >
         <Grid.Col span='auto'>
-          <Title order={1}>Edit invoice</Title>
+          <Title order={1}>Editar factura</Title>
         </Grid.Col>
         <Grid.Col span='content'></Grid.Col>
       </Grid>

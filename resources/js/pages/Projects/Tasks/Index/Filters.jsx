@@ -17,7 +17,7 @@ export default function Filters() {
         {groups.length > 0 && (
           <div>
             <Text fz="xs" fw={700} tt="uppercase" mb="sm">
-              Task groups
+            Grupos de tareas
             </Text>
             <Stack justify="flex-start" gap={6}>
               {groups.map((item) => (
@@ -36,7 +36,7 @@ export default function Filters() {
         {usersWithAccessToProject.length > 0 && (
           <div>
             <Text fz="xs" fw={700} tt="uppercase" mb="sm">
-              Assignees
+            Cesionarias
             </Text>
             <Stack justify="flex-start" gap={6}>
               {usersWithAccessToProject.map((item) => (

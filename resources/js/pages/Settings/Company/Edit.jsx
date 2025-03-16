@@ -52,7 +52,7 @@ const CompanyEdit = () => {
         mb={35}
       >
         <Grid.Col span='auto'>
-          <Title order={1}>My company</Title>
+          <Title order={1}>Mi empresa</Title>
         </Grid.Col>
         <Grid.Col span='content'></Grid.Col>
       </Grid>
@@ -87,7 +87,7 @@ const CompanyEdit = () => {
             <Grid.Col span='auto'>
               <FileInput
                 label='Logo'
-                placeholder='Choose image'
+                placeholder='Elige imagen'
                 accept='image/png,image/jpeg'
                 onChange={image => updateValue('logo', image)}
                 clearable
@@ -105,8 +105,8 @@ const CompanyEdit = () => {
           </Grid>
 
           <TextInput
-            label='Name'
-            placeholder='Company name'
+            label='Nombre'
+            placeholder='Nombre de empresa'
             required
             mt='md'
             value={form.data.name}
@@ -120,8 +120,8 @@ const CompanyEdit = () => {
             mt='xl'
           >
             <TextInput
-              label='Address'
-              placeholder='Address'
+              label='Dirección'
+              placeholder='Dirección'
               value={form.data.address}
               onChange={e => updateValue('address', e.target.value)}
               error={form.errors.address}
@@ -130,8 +130,8 @@ const CompanyEdit = () => {
 
             <Group grow>
               <TextInput
-                label='Postal code'
-                placeholder='Postal code'
+                label='Código Postal'
+                placeholder='Código Postal'
                 mt='md'
                 value={form.data.postal_code}
                 onChange={e => updateValue('postal_code', e.target.value)}
@@ -140,8 +140,8 @@ const CompanyEdit = () => {
               />
 
               <TextInput
-                label='City'
-                placeholder='City'
+                label='Ciudad'
+                placeholder='Ciudad'
                 mt='md'
                 value={form.data.city}
                 onChange={e => updateValue('city', e.target.value)}
@@ -151,8 +151,8 @@ const CompanyEdit = () => {
             </Group>
 
             <Select
-              label='Country'
-              placeholder='Select country'
+              label='País'
+              placeholder='Seleccionar País'
               mt='md'
               searchable={true}
               value={form.data.country_id?.toString()}
@@ -164,12 +164,12 @@ const CompanyEdit = () => {
           </Fieldset>
 
           <Fieldset
-            legend='Details'
+            legend='Detalles'
             mt='xl'
           >
             <TextInput
-              label='Business ID'
-              placeholder='Business ID'
+              label='Identificación comercial'
+              placeholder='Identificación comercial'
               value={form.data.business_id}
               onChange={e => updateValue('business_id', e.target.value)}
               error={form.errors.business_id}
@@ -198,7 +198,7 @@ const CompanyEdit = () => {
           </Fieldset>
 
           <Fieldset
-            legend='Finance'
+            legend='Finanzas'
             mt='xl'
           >
             <TextInput
@@ -222,8 +222,8 @@ const CompanyEdit = () => {
 
             <Group grow>
               <Select
-                label='Default currency'
-                placeholder='Select currency'
+                label='Moneda predeterminada'
+                placeholder='Seleccionar moneda'
                 required
                 mt='md'
                 searchable={true}
@@ -252,7 +252,7 @@ const CompanyEdit = () => {
           </Fieldset>
 
           <Fieldset
-            legend='Contact'
+            legend='Contacto'
             mt='xl'
           >
             <Group grow>
@@ -266,8 +266,8 @@ const CompanyEdit = () => {
               />
 
               <TextInput
-                label='Phone'
-                placeholder='Phone'
+                label='Teléfono'
+                placeholder='Teléfono'
                 value={form.data.phone}
                 onChange={e => updateValue('phone', e.target.value)}
                 error={form.errors.phone}

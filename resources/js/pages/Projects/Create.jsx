@@ -50,9 +50,9 @@ const ProjectCreate = ({ dropdowns: { companies, users, currencies } }) => {
           onClick={() => redirectTo('projects.index')}
           fz={14}
         >
-          Projects
+          Proyectos
         </Anchor>
-        <div>Create</div>
+        <div>Crear</div>
       </Breadcrumbs>
 
       <Grid
@@ -62,7 +62,7 @@ const ProjectCreate = ({ dropdowns: { companies, users, currencies } }) => {
         mb='lg'
       >
         <Grid.Col span='auto'>
-          <Title order={1}>Create project</Title>
+          <Title order={1}>Crear proyecto</Title>
         </Grid.Col>
         <Grid.Col span='content'></Grid.Col>
       </Grid>
@@ -70,8 +70,8 @@ const ProjectCreate = ({ dropdowns: { companies, users, currencies } }) => {
       <ContainerBox maw={500}>
         <form onSubmit={submit}>
           <TextInput
-            label='Name'
-            placeholder='Project name'
+            label='Nombre'
+            placeholder='Nombre del proyecto'
             required
             mt='md'
             value={form.data.name}
@@ -80,8 +80,8 @@ const ProjectCreate = ({ dropdowns: { companies, users, currencies } }) => {
           />
 
           <Textarea
-            label='Description'
-            placeholder='Project description'
+            label='Descripcion'
+            placeholder='Descripcion del proyecto'
             mt='md'
             autosize
             minRows={4}
@@ -91,8 +91,8 @@ const ProjectCreate = ({ dropdowns: { companies, users, currencies } }) => {
           />
 
           <Select
-            label='Company requesting work'
-            placeholder='Select company'
+            label='Empresa que solicita trabajo'
+            placeholder='Seleccione empresa'
             required
             mt='md'
             value={form.data.client_company_id}
@@ -102,8 +102,8 @@ const ProjectCreate = ({ dropdowns: { companies, users, currencies } }) => {
           />
 
           <MultiSelect
-            label="Grant access to users"
-            placeholder="Select users"
+            label="Conceder acceso a las usuarias"
+            placeholder="Seleccione usuarios"
             mt='md'
             searchable
             value={form.data.users}
@@ -113,7 +113,7 @@ const ProjectCreate = ({ dropdowns: { companies, users, currencies } }) => {
           />
 
           <NumberInput
-            label='Hourly rate'
+            label='Tarifa por hora'
             mt='md'
             allowNegative={false}
             clampBehavior='strict'
@@ -130,7 +130,7 @@ const ProjectCreate = ({ dropdowns: { companies, users, currencies } }) => {
             mt='xl'
           >
             <BackButton route='projects.index' />
-            <ActionButton loading={form.processing}>Create</ActionButton>
+            <ActionButton loading={form.processing}>Crear</ActionButton>
           </Group>
         </form>
       </ContainerBox>

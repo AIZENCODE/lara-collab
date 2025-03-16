@@ -17,8 +17,8 @@ export default function TaskGroupActions({ group, ...props }) {
   const openArchiveModal = () =>
     openConfirmModal({
       type: "danger",
-      title: "Archive task group",
-      content: `Are you sure you want to archive this task group?`,
+      title: "Grupo de tareas de archivo",
+      content: `¿Está seguro de que desea archivar este grupo de tareas?`,
       confirmLabel: "Archive",
       confirmProps: { color: "red" },
       onConfirm: () => archiveForm.submit({ preserveScroll: true }),
@@ -27,8 +27,8 @@ export default function TaskGroupActions({ group, ...props }) {
   const openRestoreModal = () =>
     openConfirmModal({
       type: "info",
-      title: "Restore task group",
-      content: `Are you sure you want to restore this task group?`,
+      title: "Restaurar grupo de tareas",
+      content: `¿Está seguro de que desea restaurar este grupo de tareas?`,
       confirmLabel: "Restore",
       confirmProps: { color: "blue" },
       onConfirm: () => restoreForm.submit({ preserveScroll: true }),

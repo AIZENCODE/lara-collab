@@ -20,7 +20,7 @@ const ProjectsIndex = () => {
       <Grid justify="space-between" align="center">
         <Grid.Col span="content">
           <Group>
-            <SearchInput placeholder="Search projects" search={search} />
+            <SearchInput placeholder="Buscar proyecto" search={search} />
             {isAdmin() && <ArchivedFilterButton />}
           </Group>
         </Grid.Col>
@@ -31,7 +31,7 @@ const ProjectsIndex = () => {
               radius="xl"
               onClick={() => redirectTo("projects.create")}
             >
-              Create
+              Crear
             </Button>
           )}
         </Grid.Col>

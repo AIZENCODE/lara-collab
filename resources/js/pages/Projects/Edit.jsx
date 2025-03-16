@@ -73,8 +73,8 @@ const ProjectEdit = ({ dropdowns: { companies, users,currencies } }) => {
       <ContainerBox maw={500}>
         <form onSubmit={submit}>
           <TextInput
-            label='Name'
-            placeholder='Project name'
+            label='Nombre'
+            placeholder='Nombre del proyecto'
             required
             mt='md'
             value={form.data.name}
@@ -84,7 +84,7 @@ const ProjectEdit = ({ dropdowns: { companies, users,currencies } }) => {
 
           <Textarea
             label='Description'
-            placeholder='Project description'
+            placeholder='Descripcion del proyecto'
             mt='md'
             autosize
             minRows={4}
@@ -95,7 +95,7 @@ const ProjectEdit = ({ dropdowns: { companies, users,currencies } }) => {
 
           <Select
             label='Company requesting work'
-            placeholder='Select company'
+            placeholder='Seleccionar compañia'
             required
             mt='md'
             value={form.data.client_company_id?.toString()}
@@ -105,8 +105,8 @@ const ProjectEdit = ({ dropdowns: { companies, users,currencies } }) => {
           />
 
           <MultiSelect
-            label="Grant access to users"
-            placeholder="Select users"
+            label="Conceder acceso a las usuarias"
+            placeholder="Seleccionar usuarios"
             mt='md'
             searchable
             value={form.data.users}
@@ -116,7 +116,7 @@ const ProjectEdit = ({ dropdowns: { companies, users,currencies } }) => {
           />
 
           <NumberInput
-            label='Hourly rate'
+            label='Tarifa por hora'
             mt='md'
             allowNegative={false}
             clampBehavior='strict'
@@ -133,7 +133,7 @@ const ProjectEdit = ({ dropdowns: { companies, users,currencies } }) => {
             mt='xl'
           >
             <BackButton route='projects.index' />
-            <ActionButton loading={form.processing}>Update</ActionButton>
+            <ActionButton loading={form.processing}>Actualizar</ActionButton>
           </Group>
         </form>
       </ContainerBox>

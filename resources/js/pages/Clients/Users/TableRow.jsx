@@ -49,15 +49,13 @@ export default function TableRow({ item }) {
             archive={{
               route: "clients.users.destroy",
               title: "Archive client",
-              content: `Are you sure you want to archive this client? This action will prevent
-                the client from logging in, while all other aspects related to the
-                client's actions will remain unaffected.`,
+              content: `¿Seguro que desea archivar este cliente? Esta acción impedirá que el cliente inicie sesión, pero el resto de sus acciones no se verán afectadas.`,
               confirmLabel: "Archive",
             }}
             restore={{
               route: "clients.users.restore",
               title: "Restore client",
-              content: `Are you sure you want to restore this client? This action will allow the client to login.`,
+              content: `¿Seguro que desea restaurar este cliente? Esta acción le permitirá iniciar sesión.`,
               confirmLabel: "Restore",
             }}
           />

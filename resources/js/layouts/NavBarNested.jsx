@@ -31,27 +31,27 @@ export default function Sidebar() {
         visible: true,
       },
       {
-        label: "Projects",
+        label: "Proyectos",
         icon: IconListDetails,
         link: route("projects.index"),
         active: route().current("projects.*"),
         visible: can("view projects"),
       },
       {
-        label: "My Work",
+        label: "Trabajos",
         icon: IconLayoutList,
         active: route().current("my-work.*"),
         opened: route().current("my-work.*"),
         visible: can("view tasks") || can("view activities"),
         links: [
           {
-            label: "Tasks",
+            label: "Tareas",
             link: route("my-work.tasks.index"),
             active: route().current("my-work.tasks.*"),
             visible: can("view tasks"),
           },
           {
-            label: "Activity",
+            label: "Actividades",
             link: route("my-work.activity.index"),
             active: route().current("my-work.activity.*"),
             visible: can("view activities"),
@@ -59,20 +59,20 @@ export default function Sidebar() {
         ],
       },
       {
-        label: "Clients",
+        label: "Clientes",
         icon: IconBuildingSkyscraper,
         active: route().current("clients.*"),
         opened: route().current("clients.*"),
         visible: can("view client users") || can("view client companies"),
         links: [
           {
-            label: "Users",
+            label: "Usuarios",
             link: route("clients.users.index"),
             active: route().current("clients.users.*"),
             visible: can("view client users"),
           },
           {
-            label: "Companies",
+            label: "Empresas",
             link: route("clients.companies.index"),
             active: route().current("clients.companies.*"),
             visible: can("view client companies"),
@@ -80,34 +80,34 @@ export default function Sidebar() {
         ],
       },
       {
-        label: "Users",
+        label: "Usuarios",
         icon: IconUsers,
         link: route("users.index"),
         active: route().current("users.*"),
         visible: can("view users"),
       },
       {
-        label: "Invoices",
+        label: "Facturas",
         icon: IconFileDollar,
         link: route("invoices.index"),
         active: route().current("invoices.*"),
         visible: can("view invoices"),
       },
       {
-        label: "Reports",
+        label: "Reportes",
         icon: IconReportAnalytics,
         active: route().current("reports.*"),
         opened: route().current("reports.*"),
         visible: can("view logged time sum report") || can("view daily logged time report"),
         links: [
           {
-            label: "Logged time sum",
+            label: "Suma de tiempo registrado",
             link: route("reports.logged-time.sum"),
             active: route().current("reports.logged-time.sum"),
             visible: can("view logged time sum report"),
           },
           {
-            label: "Daily logged time",
+            label: "Tiempo registrado diariamente",
             link: route("reports.logged-time.daily"),
             active: route().current("reports.logged-time.daily"),
             visible: can("view daily logged time report"),
@@ -115,14 +115,14 @@ export default function Sidebar() {
         ],
       },
       {
-        label: "Settings",
+        label: "Ajustes",
         icon: IconSettings,
         active: route().current("settings.*"),
         opened: route().current("settings.*"),
         visible: can("view owner company") || can("view roles") || can("view labels"),
         links: [
           {
-            label: "Company",
+            label: "Compañía",
             link: route("settings.company.edit"),
             active: route().current("settings.company.*"),
             visible: can("view owner company"),
@@ -134,7 +134,7 @@ export default function Sidebar() {
             visible: can("view roles"),
           },
           {
-            label: "Labels",
+            label: "Etiquetas",
             link: route("settings.labels.index"),
             active: route().current("settings.labels.*"),
             visible: can("view labels"),

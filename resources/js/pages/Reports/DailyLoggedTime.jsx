@@ -39,12 +39,12 @@ const DailyLoggedTime = () => {
   return (
     <>
       <Breadcrumbs fz={14} mb={30}>
-        <div>Reports</div>
-        <div>Daily logged time</div>
+        <div>Informes</div>
+        <div>Tiempo registrado diariamente</div>
       </Breadcrumbs>
 
       <Title order={1} mb={20}>
-        Daily logged time
+      Tiempo registrado diariamente
       </Title>
 
       <ContainerBox px={35} py={25}>
@@ -62,7 +62,7 @@ const DailyLoggedTime = () => {
               />
 
               <MultiSelect
-                placeholder={form.data.users.length ? null : "Select users"}
+                placeholder={form.data.users.length ? null : "Seleccionar usuarios"}
                 required
                 w={220}
                 value={form.data.users}
@@ -85,20 +85,20 @@ const DailyLoggedTime = () => {
               </DatesProvider>
 
               <Checkbox
-                label="Billable"
+                label="facturable"
                 checked={form.data.billable}
                 onChange={(event) => updateValue("billable", event.currentTarget.checked)}
               />
 
               <Checkbox
-                label="Completed"
+                label="Terminada"
                 checked={form.data.completed}
                 onChange={(event) => updateValue("completed", event.currentTarget.checked)}
               />
             </Group>
 
             <Button type="submit" disabled={form.processing}>
-              Submit
+            Entregar
             </Button>
           </Group>
         </form>
@@ -147,7 +147,7 @@ const DailyLoggedTime = () => {
         ) : (
           <Center mih={300}>
             <EmptyWithIcon
-              title="No logged time found"
+              title="No se encontró tiempo registrado"
               subtitle="Try changing selected filters"
               icon={IconClock}
             />

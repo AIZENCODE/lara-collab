@@ -44,14 +44,14 @@ const UserEdit = () => {
     <>
       <Breadcrumbs fz={14} mb={30}>
         <Anchor href="#" onClick={() => redirectTo("users.index")} fz={14}>
-          Users
+          Usuarios
         </Anchor>
-        <div>Edit</div>
+        <div>Editar</div>
       </Breadcrumbs>
 
       <Grid justify="space-between" align="flex-end" gutter="xl" mb="lg">
         <Grid.Col span="auto">
-          <Title order={1}>Edit user</Title>
+          <Title order={1}>Editar usuario</Title>
         </Grid.Col>
         <Grid.Col span="content"></Grid.Col>
       </Grid>
@@ -72,15 +72,15 @@ const UserEdit = () => {
             </Grid.Col>
             <Grid.Col span="auto">
               <FileInput
-                label="Profile image"
-                placeholder="Choose image"
+                label="Imagen de perfil"
+                placeholder="Elige imagen"
                 accept="image/png,image/jpeg"
                 onChange={(image) => updateValue("avatar", image)}
                 clearable
                 error={form.errors.avatar}
               />
               <Text size="xs" c="dimmed" mt="sm">
-                If no image is uploaded we will try to fetch it via{" "}
+              Si no se carga ninguna imagen, intentaremos obtenerla a través de{" "}
                 <Anchor href="https://unavatar.io" target="_blank" opacity={0.6}>
                   unavatar.io
                 </Anchor>{" "}
@@ -90,8 +90,8 @@ const UserEdit = () => {
           </Grid>
 
           <TextInput
-            label="Name"
-            placeholder="User full name"
+            label="Nombre"
+            placeholder="Nombre completo del usuario"
             required
             mt="md"
             value={form.data.name}
@@ -100,8 +100,8 @@ const UserEdit = () => {
           />
 
           <TextInput
-            label="Job title"
-            placeholder="e.g. Frontend Developer"
+            label="Título profesional"
+            placeholder="e.g. Desarrollador frontend"
             required
             mt="md"
             value={form.data.job_title}
@@ -111,7 +111,7 @@ const UserEdit = () => {
 
           <MultiSelect
             label="Roles"
-            placeholder="Select role"
+            placeholder="Seleccionar roles"
             required
             mt="md"
             value={form.data.roles}
@@ -122,15 +122,15 @@ const UserEdit = () => {
 
           <Group grow mt="md">
             <TextInput
-              label="Phone"
-              placeholder="Users phone number"
+              label="Teléfono"
+              placeholder="Número de teléfono de las usuarias"
               value={form.data.phone}
               onChange={(e) => updateValue("phone", e.target.value)}
               error={form.errors.phone}
             />
 
             <NumberInput
-              label="Hourly rate"
+              label="Tarifa por hora"
               allowNegative={false}
               clampBehavior="strict"
               decimalScale={2}
@@ -142,11 +142,11 @@ const UserEdit = () => {
             />
           </Group>
 
-          <Divider mt="xl" mb="md" label="Login credentials" labelPosition="center" />
+          <Divider mt="xl" mb="md" label="Credenciales de inicio de sesión" labelPosition="center" />
 
           <TextInput
             label="Email"
-            placeholder="User email"
+            placeholder="Correo electrónico del usuario"
             required
             value={form.data.email}
             onChange={(e) => updateValue("email", e.target.value)}
@@ -155,8 +155,8 @@ const UserEdit = () => {
           />
 
           <PasswordInput
-            label="Password"
-            placeholder="User password"
+            label="Contraseña"
+            placeholder="Contraseña de usuario"
             mt="md"
             value={form.data.password}
             onChange={(e) => updateValue("password", e.target.value)}
@@ -164,8 +164,8 @@ const UserEdit = () => {
           />
 
           <PasswordInput
-            label="Confirm password"
-            placeholder="Confirm password"
+            label="Confirmar Contraseña"
+            placeholder="Confirmar Contraseña"
             mt="md"
             value={form.data.password_confirmation}
             onChange={(e) => updateValue("password_confirmation", e.target.value)}
@@ -174,7 +174,7 @@ const UserEdit = () => {
 
           <Group justify="space-between" mt="xl">
             <BackButton route="users.index" />
-            <ActionButton loading={form.processing}>Update</ActionButton>
+            <ActionButton loading={form.processing}>Actualizar</ActionButton>
           </Group>
         </form>
       </ContainerBox>

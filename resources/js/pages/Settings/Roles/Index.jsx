@@ -38,7 +38,7 @@ const RolesIndex = () => {
       <Grid justify="space-between" align="center">
         <Grid.Col span="content">
           <Group>
-            <SearchInput placeholder="Search roles" search={search} />
+            <SearchInput placeholder="Buscar rol" search={search} />
             <ArchivedFilterButton />
           </Group>
         </Grid.Col>
@@ -49,7 +49,7 @@ const RolesIndex = () => {
               radius="xl"
               onClick={() => redirectTo("settings.roles.create")}
             >
-              Create
+              Crear
             </Button>
           )}
         </Grid.Col>

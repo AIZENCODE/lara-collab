@@ -21,7 +21,7 @@ export default function RecentlyAssignedTasks({ tasks }) {
   return (
     <Card bg="none">
       <Title order={3} ml={15}>
-        Recently assigned tasks
+      Tareas asignadas recientemente
       </Title>
 
       <Divider my={14} />

@@ -53,15 +53,15 @@ const LoggedTimeSum = () => {
         fz={14}
         mb={30}
       >
-        <div>Reports</div>
-        <div>Logged time sum</div>
+        <div>Informes</div>
+        <div>Suma de tiempo registrado</div>
       </Breadcrumbs>
 
       <Title
         order={1}
         mb={20}
       >
-        Logged time sum
+       Suma de tiempo registrado
       </Title>
 
       <ContainerBox
@@ -72,7 +72,7 @@ const LoggedTimeSum = () => {
           <Group justify='space-between'>
             <Group gap='xl'>
               <MultiSelect
-                placeholder={form.data.projects.length ? null : 'Select projects'}
+                placeholder={form.data.projects.length ? null : 'Seleccionar proyectos'}
                 required
                 w={220}
                 value={form.data.projects}
@@ -95,7 +95,7 @@ const LoggedTimeSum = () => {
                 <DatePickerInput
                   type='range'
                   valueFormat='MMM D'
-                  placeholder='Pick dates range'
+                  placeholder='Elija el rango de fechas'
                   clearable
                   allowSingleDateInRange
                   miw={200}
@@ -105,13 +105,13 @@ const LoggedTimeSum = () => {
               </DatesProvider>
 
               <Checkbox
-                label='Billable'
+                label='Facturable'
                 checked={form.data.billable}
                 onChange={event => updateValue('billable', event.currentTarget.checked)}
               />
 
               <Checkbox
-                label='Completed'
+                label='Terminada'
                 checked={form.data.completed}
                 onChange={event => updateValue('completed', event.currentTarget.checked)}
               />
@@ -121,7 +121,7 @@ const LoggedTimeSum = () => {
               type='submit'
               disabled={form.processing}
             >
-              Submit
+              Entregar
             </Button>
           </Group>
         </form>
@@ -182,8 +182,8 @@ const LoggedTimeSum = () => {
         ) : (
           <Center mih={300}>
             <EmptyWithIcon
-              title='No logged time found'
-              subtitle='Try changing selected filters'
+              title='No se encontró tiempo registrado'
+              subtitle='Intente cambiar los filtros seleccionados'
               icon={IconClock}
             />
           </Center>

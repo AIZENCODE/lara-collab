@@ -38,7 +38,7 @@ const LabelsIndex = () => {
       <Grid justify="space-between" align="center">
         <Grid.Col span="content">
           <Group>
-            <SearchInput placeholder="Search labels" search={search} />
+            <SearchInput placeholder="Buscar etiqueta" search={search} />
             <ArchivedFilterButton />
           </Group>
         </Grid.Col>
@@ -49,7 +49,7 @@ const LabelsIndex = () => {
               radius="xl"
               onClick={() => redirectTo("settings.labels.create")}
             >
-              Create
+              Crear
             </Button>
           )}
         </Grid.Col>

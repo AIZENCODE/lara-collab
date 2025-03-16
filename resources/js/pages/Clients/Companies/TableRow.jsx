@@ -53,13 +53,13 @@ export default function TableRow({ item }) {
             archive={{
               route: 'clients.companies.destroy',
               title: 'Archive company',
-              content: `Are you sure you want to archive this company?`,
+              content: `¿Estás seguro de que deseas archivar esta empresa?`,
               confirmLabel: 'Archive',
             }}
             restore={{
               route: 'clients.companies.restore',
               title: 'Restore company',
-              content: `Are you sure you want to restore this company?`,
+              content: `¿Estás segura de que quieres restaurar esta empresa?`,
               confirmLabel: 'Restore',
             }}
           />

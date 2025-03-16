@@ -55,7 +55,7 @@ const InvoicesIndex = () => {
               radius="xl"
               onClick={() => redirectTo("invoices.create")}
             >
-              Create
+              Crear
             </Button>
           )}
         </Grid.Col>

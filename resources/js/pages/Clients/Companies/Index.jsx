@@ -61,7 +61,7 @@ const ClientCompaniesIndex = () => {
               radius='xl'
               onClick={() => redirectTo('clients.companies.create')}
             >
-              Create
+              Crear
             </Button>
           )}
         </Grid.Col>

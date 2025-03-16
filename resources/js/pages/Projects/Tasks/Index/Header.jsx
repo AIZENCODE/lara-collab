@@ -36,7 +36,7 @@ export default function Header() {
           </Title>
         </Group>
         <Group>
-          <SearchInput placeholder="Search tasks" search={search} mr="md" />
+          <SearchInput placeholder="Buscar tareas" search={search} mr="md" />
 
           <ActionIcon.Group>
             {tasksView === "kanban" && (

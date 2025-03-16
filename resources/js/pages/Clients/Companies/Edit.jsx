@@ -52,9 +52,9 @@ const ClientCompanyEdit = () => {
           onClick={() => redirectTo('clients.companies.index')}
           fz={14}
         >
-          Companies
+          Compañias
         </Anchor>
-        <div>Edit</div>
+        <div>Editar</div>
       </Breadcrumbs>
 
       <Grid
@@ -64,7 +64,7 @@ const ClientCompanyEdit = () => {
         mb='lg'
       >
         <Grid.Col span='auto'>
-          <Title order={1}>Edit company</Title>
+          <Title order={1}>Editar compañia</Title>
         </Grid.Col>
         <Grid.Col span='content'></Grid.Col>
       </Grid>
@@ -72,8 +72,8 @@ const ClientCompanyEdit = () => {
       <ContainerBox maw={600}>
         <form onSubmit={submit}>
           <TextInput
-            label='Name'
-            placeholder='Company name'
+            label='Nombre'
+            placeholder='Nombre de compañia'
             required
             value={form.data.name}
             onChange={e => updateValue('name', e.target.value)}
@@ -81,8 +81,8 @@ const ClientCompanyEdit = () => {
           />
 
           <Select
-            label='Default currency'
-            placeholder='Select currency'
+            label='Moneda predeterminada'
+            placeholder='Seleccionar moneda'
             required
             mt='md'
             searchable={true}
@@ -93,8 +93,8 @@ const ClientCompanyEdit = () => {
           />
 
           <MultiSelect
-            label='Clients'
-            placeholder='Select clients'
+            label='Clientes'
+            placeholder='Seleccionar clientes'
             required
             mt='md'
             value={form.data.clients}
@@ -104,12 +104,12 @@ const ClientCompanyEdit = () => {
           />
 
           <Fieldset
-            legend='Location'
+            legend='Ubicación'
             mt='xl'
           >
             <TextInput
-              label='Address'
-              placeholder='Address'
+              label='Dirección'
+              placeholder='Dirección'
               value={form.data.address}
               onChange={e => updateValue('address', e.target.value)}
               error={form.errors.address}
@@ -117,8 +117,8 @@ const ClientCompanyEdit = () => {
 
             <Group grow>
               <TextInput
-                label='Postal code'
-                placeholder='Postal code'
+                label='Código Postal'
+                placeholder='Código Postal'
                 mt='md'
                 value={form.data.postal_code}
                 onChange={e => updateValue('postal_code', e.target.value)}
@@ -126,8 +126,8 @@ const ClientCompanyEdit = () => {
               />
 
               <TextInput
-                label='City'
-                placeholder='City'
+                label='Ciudad'
+                placeholder='Ciudad'
                 mt='md'
                 value={form.data.city}
                 onChange={e => updateValue('city', e.target.value)}
@@ -136,8 +136,8 @@ const ClientCompanyEdit = () => {
             </Group>
 
             <Select
-              label='Country'
-              placeholder='Select country'
+              label='País'
+              placeholder='Seleccionar País'
               mt='md'
               searchable={true}
               value={form.data.country_id?.toString()}
@@ -148,12 +148,12 @@ const ClientCompanyEdit = () => {
           </Fieldset>
 
           <Fieldset
-            legend='Details'
+            legend='Detalle'
             mt='xl'
           >
             <TextInput
-              label='Business ID'
-              placeholder='Business ID'
+              label='Identificación comercial'
+              placeholder='Identificación comercial'
               value={form.data.business_id}
               onChange={e => updateValue('business_id', e.target.value)}
               error={form.errors.business_id}
@@ -179,7 +179,7 @@ const ClientCompanyEdit = () => {
           </Fieldset>
 
           <Fieldset
-            legend='Finance'
+            legend='Finanzas'
             mt='xl'
           >
             <TextInput
@@ -201,7 +201,7 @@ const ClientCompanyEdit = () => {
           </Fieldset>
 
           <Fieldset
-            legend='Contact'
+            legend='Contacto'
             mt='xl'
           >
             <Group grow>
@@ -214,8 +214,8 @@ const ClientCompanyEdit = () => {
               />
 
               <TextInput
-                label='Phone'
-                placeholder='Phone'
+                label='Teléfono'
+                placeholder='Teléfono'
                 value={form.data.phone}
                 onChange={e => updateValue('phone', e.target.value)}
                 error={form.errors.phone}
@@ -237,7 +237,7 @@ const ClientCompanyEdit = () => {
             mt='xl'
           >
             <BackButton route='clients.companies.index' />
-            <ActionButton loading={form.processing}>Update</ActionButton>
+            <ActionButton loading={form.processing}>Actualizar</ActionButton>
           </Group>
         </form>
       </ContainerBox>

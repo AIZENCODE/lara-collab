@@ -63,7 +63,7 @@ export default function ProjectCardActions({ item }) {
                 onClick={openUserAccess}
                 data-ignore-link
               >
-                User access
+                Acceso de usuario
               </Menu.Item>
             )}
             {can("edit project") && (
@@ -78,7 +78,7 @@ export default function ProjectCardActions({ item }) {
                 onClick={() => router.visit(route("projects.edit", item.id))}
                 data-ignore-link
               >
-                Edit
+                Editar
               </Menu.Item>
             )}
             {can("restore project") && route().params.archived && (
@@ -94,7 +94,7 @@ export default function ProjectCardActions({ item }) {
                 onClick={openRestoreModal}
                 data-ignore-link
               >
-                Restore
+                Restaurar
               </Menu.Item>
             )}
             {can("archive project") && !route().params.archived && (
@@ -110,7 +110,7 @@ export default function ProjectCardActions({ item }) {
                 onClick={openArchiveModal}
                 data-ignore-link
               >
-                Archive
+                Archivar
               </Menu.Item>
             )}
           </Menu.Dropdown>

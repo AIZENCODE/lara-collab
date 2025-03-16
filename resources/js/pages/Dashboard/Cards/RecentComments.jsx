@@ -21,7 +21,7 @@ export default function RecentComments({ comments }) {
   return (
     <Card bg="none">
       <Title order={3} ml={15}>
-        Recent comments
+      Comentarios recientes
       </Title>
 
       <Divider my={14} />

@@ -115,14 +115,14 @@ export const InvoiceCreate = () => {
     <>
       <Breadcrumbs fz={14} mb={30}>
         <Anchor href="#" onClick={() => redirectTo("invoices.index")} fz={14}>
-          Invoices
+          Facturas
         </Anchor>
-        <div>Create</div>
+        <div>Crear</div>
       </Breadcrumbs>
 
       <Grid justify="space-between" align="flex-end" gutter="xl" mb="lg">
         <Grid.Col span="auto">
-          <Title order={1}>Create invoice</Title>
+          <Title order={1}>Crear factura</Title>
         </Grid.Col>
         <Grid.Col span="content"></Grid.Col>
       </Grid>
@@ -131,8 +131,8 @@ export const InvoiceCreate = () => {
         <ContainerBox>
           <form onSubmit={submit}>
             <TextInput
-              label="Invoice number"
-              placeholder="Invoice number"
+              label="Número de factura"
+              placeholder="Número de factura"
               required
               value={form.data.number}
               onChange={(e) => updateValue("number", e.target.value)}
@@ -140,8 +140,8 @@ export const InvoiceCreate = () => {
             />
 
             <Select
-              label="Client company"
-              placeholder="Select client company"
+              label="Empresa cliente"
+              placeholder="Seleccionar empresa cliente"
               searchable={true}
               allowDeselect={false}
               mt="md"
@@ -153,9 +153,9 @@ export const InvoiceCreate = () => {
             />
 
             <MultiSelect
-              label="Projects"
+              label="Proyectos"
               placeholder={
-                filteredProjects.length ? "Select projects" : "Please select client company first"
+                filteredProjects.length ? "Seleccionar proyectos" : "Por favor seleccione primero la empresa cliente"
               }
               disabled={filteredProjects.length === 0}
               withAsterisk
@@ -167,21 +167,21 @@ export const InvoiceCreate = () => {
             />
 
             <Radio.Group
-              label="Payment type"
+              label="Tipo de pago"
               mt="md"
               withAsterisk
               value={form.data.type}
               onChange={(value) => updateValue("type", value)}
             >
               <Group mt="xs">
-                <Radio value="hourly" label="Hourly" />
+                <Radio value="hourly" label="Cada hora" />
                 <Radio value="fixed_amount" label="Fixed amount" />
               </Group>
             </Radio.Group>
 
             {form.data.type === "hourly" && (
               <NumberInput
-                label="Hourly rate"
+                label="Cada hora"
                 mt="md"
                 allowNegative={false}
                 clampBehavior="strict"
@@ -196,7 +196,7 @@ export const InvoiceCreate = () => {
 
             {form.data.type === "fixed_amount" && (
               <NumberInput
-                label="Fixed amount"
+                label="Cantidad fija"
                 mt="md"
                 allowNegative={false}
                 clampBehavior="strict"
@@ -210,8 +210,8 @@ export const InvoiceCreate = () => {
             )}
 
             <Textarea
-              label="Note"
-              placeholder="Invoice note"
+              label="Nota"
+              placeholder="Nota de factura"
               mt="md"
               autosize
               minRows={4}
@@ -288,7 +288,7 @@ export const InvoiceCreate = () => {
                     ))
                   ) : (
                     <Text size="sm" c="dimmed">
-                      No tasks with logged time were found
+                      No se encontraron tareas con tiempo registrado
                     </Text>
                   )}
                 </Box>
@@ -310,10 +310,10 @@ export const InvoiceCreate = () => {
                 <Box align="center">
                   <IconSearch style={{ width: rem(55), height: rem(55) }} opacity={0.5} />
                   <Text fz={24} fw={600} align="center">
-                    No tasks found
+                  No se encontraron tareas
                   </Text>
                   <Text fz={15} c="dimmed">
-                    Select company and at least one project
+                  Seleccione empresa y al menos un proyecto
                   </Text>
                 </Box>
               </Center>

@@ -67,15 +67,15 @@ const UserCreate = () => {
             </Grid.Col>
             <Grid.Col span="auto">
               <FileInput
-                label="Profile image"
-                placeholder="Choose image"
+                label="Imagen de perfil"
+                placeholder="Elige imagen"
                 accept="image/png,image/jpeg"
                 onChange={(image) => updateValue("avatar", image)}
                 clearable
                 error={form.errors.avatar}
               />
               <Text size="xs" c="dimmed" mt="sm">
-                If no image is uploaded we will try to fetch it via{" "}
+              Si no se carga ninguna imagen, intentaremos obtenerla a través de{" "}
                 <Anchor href="https://unavatar.io" target="_blank" opacity={0.6}>
                   unavatar.io
                 </Anchor>{" "}
@@ -85,8 +85,8 @@ const UserCreate = () => {
           </Grid>
 
           <TextInput
-            label="Name"
-            placeholder="User full name"
+            label="Nombre"
+            placeholder="Nombre completo del usuario"
             required
             mt="md"
             value={form.data.name}
@@ -95,7 +95,7 @@ const UserCreate = () => {
           />
 
           <TextInput
-            label="Job title"
+            label="Título profesional"
             placeholder="e.g. Frontend Developer"
             required
             mt="md"
@@ -106,7 +106,7 @@ const UserCreate = () => {
 
           <MultiSelect
             label="Roles"
-            placeholder="Select role"
+            placeholder="Seleccionar roles"
             required
             mt="md"
             value={form.data.roles}
@@ -117,15 +117,15 @@ const UserCreate = () => {
 
           <Group grow mt="md">
             <TextInput
-              label="Phone"
-              placeholder="Users phone number"
+              label="Teléfono"
+              placeholder="Número de teléfono de las usuarias"
               value={form.data.phone}
               onChange={(e) => updateValue("phone", e.target.value)}
               error={form.errors.phone}
             />
 
             <NumberInput
-              label="Hourly rate"
+              label="Tarifa por hora"
               allowNegative={false}
               clampBehavior="strict"
               decimalScale={2}
@@ -141,7 +141,7 @@ const UserCreate = () => {
 
           <TextInput
             label="Email"
-            placeholder="User email"
+            placeholder="Correo electrónico del usuario"
             required
             value={form.data.email}
             onChange={(e) => updateValue("email", e.target.value)}
@@ -150,8 +150,8 @@ const UserCreate = () => {
           />
 
           <PasswordInput
-            label="Password"
-            placeholder="User password"
+            label="Contraseña"
+            placeholder="Contraseña de usuario"
             required
             mt="md"
             value={form.data.password}
@@ -160,8 +160,8 @@ const UserCreate = () => {
           />
 
           <PasswordInput
-            label="Confirm password"
-            placeholder="Confirm password"
+            label="Confirmar Contraseña"
+            placeholder="Confirmar Contraseña"
             required
             mt="md"
             value={form.data.password_confirmation}
@@ -171,7 +171,7 @@ const UserCreate = () => {
 
           <Group justify="space-between" mt="xl">
             <BackButton route="users.index" />
-            <ActionButton loading={form.processing}>Create</ActionButton>
+            <ActionButton loading={form.processing}>Crear</ActionButton>
           </Group>
         </form>
       </ContainerBox>

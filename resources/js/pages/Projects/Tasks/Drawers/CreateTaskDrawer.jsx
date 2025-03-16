@@ -84,7 +84,7 @@ export function CreateTaskDrawer() {
       onClose={closeDrawer}
       title={
         <Text fz={rem(28)} fw={600} ml={25} my="sm">
-          Add new task
+          Agregar nueva tarea
         </Text>
       }
       position="right"
@@ -107,8 +107,8 @@ export function CreateTaskDrawer() {
       >
         <div className={classes.content}>
           <TextInput
-            label="Name"
-            placeholder="Task name"
+            label="Nombre"
+            placeholder="Nombre de la tarea"
             required
             data-autofocus
             value={form.data.name}
@@ -118,7 +118,7 @@ export function CreateTaskDrawer() {
 
           <RichTextEditor
             mt="xl"
-            placeholder="Task description"
+            placeholder="Descripción de la tarea"
             height={260}
             onChange={(content) => updateValue("description", content)}
           />
@@ -131,8 +131,8 @@ export function CreateTaskDrawer() {
           />
 
           <MultiSelect
-            label="Subscribers"
-            placeholder="Select subscribers"
+            label="Suscriptoras"
+            placeholder="Seleccionar suscriptores"
             searchable
             mt="md"
             value={form.data.subscribed_users}
@@ -146,18 +146,18 @@ export function CreateTaskDrawer() {
 
           <Flex justify="space-between" mt="xl">
             <Button variant="transparent" w={100} disabled={form.processing} onClick={closeDrawer}>
-              Cancel
+              Cancelar
             </Button>
 
             <Button type="submit" w={120} loading={form.processing}>
-              Add task
+            Agregar tarea
             </Button>
           </Flex>
         </div>
         <div className={classes.sidebar}>
           <Select
-            label="Task group"
-            placeholder="Select task group"
+            label="Grupo de tareas"
+            placeholder="Seleccionar grupo de tareas"
             required
             value={form.data.group_id}
             onChange={(value) => updateValue("group_id", value)}
@@ -169,8 +169,8 @@ export function CreateTaskDrawer() {
           />
 
           <Select
-            label="Assignee"
-            placeholder="Select assignee"
+            label="Cesionaria"
+            placeholder="Seleccionar cesionario"
             searchable
             mt="md"
             value={form.data.assigned_to_user_id}
@@ -187,13 +187,14 @@ export function CreateTaskDrawer() {
             valueFormat="DD MMM YYYY"
             minDate={new Date()}
             mt="md"
-            label="Due date"
-            placeholder="Pick task due date"
+            label="Fecha de vencimiento"
+            placeholder="Elija la fecha de vencimiento de la tarea"
             value={form.data.due_on}
             onChange={(value) => updateValue("due_on", value)}
           />
 
           <LabelsDropdown
+            label="Etiquetas"
             items={labels}
             selected={form.data.labels}
             onChange={(values) => updateValue("labels", values)}
@@ -201,7 +202,7 @@ export function CreateTaskDrawer() {
           />
 
           <NumberInput
-            label="Time estimation"
+            label="Estimación de tiempo"
             mt="md"
             decimalScale={2}
             fixedDecimalScale
@@ -214,7 +215,7 @@ export function CreateTaskDrawer() {
           />
 
           <Checkbox
-            label="Billable"
+            label="facturable"
             mt="xl"
             checked={form.data.billable}
             onChange={(event) => updateValue("billable", event.currentTarget.checked)}
@@ -222,7 +223,7 @@ export function CreateTaskDrawer() {
 
           {!hasRoles(user, ["client"]) && (
             <Checkbox
-              label="Hidden from clients"
+              label="Escondida de las clientas"
               mt="md"
               checked={form.data.hidden_from_clients}
               onChange={(event) => updateValue("hidden_from_clients", event.currentTarget.checked)}

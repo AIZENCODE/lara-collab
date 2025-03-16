@@ -48,12 +48,12 @@ const RoleEdit = () => {
         >
           Roles
         </Anchor>
-        <div>Edit</div>
+        <div>Editar</div>
       </Breadcrumbs>
 
       <Grid justify="space-between" align="flex-end" gutter="xl" mb="lg">
         <Grid.Col span="auto">
-          <Title order={1}>Edit role</Title>
+          <Title order={1}>Editar rol</Title>
         </Grid.Col>
         <Grid.Col span="content"></Grid.Col>
       </Grid>
@@ -72,7 +72,7 @@ const RoleEdit = () => {
           )}
 
           <Title order={3} mt={form.data.name !== "client" ? "xl" : ""}>
-            Permissions
+            Permisos
           </Title>
 
           {Object.keys(allPermissionsGrouped).map((group) => (
@@ -96,7 +96,7 @@ const RoleEdit = () => {
 
           <Group justify="space-between" mt="xl">
             <BackButton route="settings.roles.index" />
-            <ActionButton loading={form.processing}>Update</ActionButton>
+            <ActionButton loading={form.processing}>Actualizar</ActionButton>
           </Group>
         </form>
       </ContainerBox>

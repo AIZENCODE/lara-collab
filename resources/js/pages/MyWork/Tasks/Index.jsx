@@ -20,12 +20,12 @@ const TasksIndex = () => {
   return (
     <>
       <Breadcrumbs fz={14} mb={30}>
-        <div>My Work</div>
-        <div>Tasks</div>
+        <div>Mi trabajo</div>
+        <div>Tareas</div>
       </Breadcrumbs>
 
       <Title order={1} mb={20}>
-        Tasks assigned to you
+      Tareas asignadas a usted
       </Title>
 
       <Box maw={1000}>
@@ -74,7 +74,7 @@ const TasksIndex = () => {
         ) : (
           <Center mih={300}>
             <EmptyWithIcon
-              title="All caught up!"
+              title="¡Todos atrapados!"
               subtitle="No tasks assigned at the moment"
               icon={IconRocket}
             />
